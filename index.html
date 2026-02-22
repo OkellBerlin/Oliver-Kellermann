@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de" class="lang-de">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,12 +17,8 @@
   <header class="site-header">
     <div class="brand">OK</div>
     <nav class="header-nav">
-      <button class="lang-toggle" onclick="toggleLang()" title="Switch language">
-        <span class="de">🇬🇧 English</span>
-        <span class="en">🇩🇪 Deutsch</span>
-      </button>
-      <a class="cta-small de" href="mailto:okellermann@icloud.com">Kontakt aufnehmen</a>
-      <a class="cta-small en" href="mailto:okellermann@icloud.com">Get in touch</a>
+      <button class="lang-toggle" id="langBtn" onclick="toggleLang()">🇬🇧 English</button>
+      <a class="cta-small" href="mailto:okellermann@icloud.com" id="ctaBtn">Kontakt aufnehmen</a>
     </nav>
   </header>
 
@@ -32,22 +28,18 @@
     <section class="hero reveal">
       <div class="hero-inner">
         <div class="hero-text">
-          <p class="kicker de">Business Development • Operations • Gastronomie</p>
-          <p class="kicker en">Business Development • Operations • Hospitality</p>
+          <p class="kicker" id="kicker">Business Development • Operations • Gastronomie</p>
           <h1>Oliver Kellermann</h1>
-          <p class="positioning de">Ich skaliere Gastronomie-Betriebe wirtschaftlich.</p>
-          <p class="positioning en">I scale hospitality businesses economically.</p>
-          <p class="lead de">Unternehmer, Betriebswirt (HWK) und Gastronom mit über 25 Jahren Erfahrung im Aufbau, in der Führung und in der Skalierung gastronomischer Betriebe.</p>
-          <p class="lead en">Entrepreneur, business economist (HWK) and restaurateur with 25+ years of experience building, leading and scaling hospitality businesses.</p>
+          <p class="positioning" id="positioning">Ich skaliere Gastronomie-Betriebe wirtschaftlich.</p>
+          <p class="lead" id="lead">Unternehmer, Betriebswirt (HWK) und Gastronom mit über 25 Jahren Erfahrung im Aufbau, in der Führung und in der Skalierung gastronomischer Betriebe.</p>
           <div class="hero-actions">
-            <a href="mailto:okellermann@icloud.com" class="btn de">Kontakt aufnehmen</a>
-            <a href="mailto:okellermann@icloud.com" class="btn en">Get in touch</a>
+            <a href="mailto:okellermann@icloud.com" class="btn" id="btnMail">Kontakt aufnehmen</a>
             <a href="https://de.linkedin.com/in/oliver-kellermann" class="btn btn-alt" target="_blank">LinkedIn</a>
           </div>
         </div>
         <div class="hero-photo">
           <div class="photo-ring">
-            <img src="./oliver.jpg" alt="Oliver Kellermann" class="photo-img" />
+            <img src="./IMG_0666.JPG" alt="Oliver Kellermann" class="photo-img" />
           </div>
         </div>
       </div>
@@ -55,215 +47,115 @@
 
     <!-- METRICS -->
     <section class="metrics reveal">
-      <div class="metric">
-        <span>25+</span>
-        <p class="de">Jahre Branchenerfahrung</p>
-        <p class="en">Years industry experience</p>
-      </div>
-      <div class="metric">
-        <span>20–30%</span>
-        <p class="de">jährl. Wachstum (Skalierungsphase)</p>
-        <p class="en">annual growth (scaling phase)</p>
-      </div>
-      <div class="metric">
-        <span>350 → 1.650€</span>
-        <p class="de">pro m² Monatsumsatz</p>
-        <p class="en">per m² monthly revenue</p>
-      </div>
-      <div class="metric">
-        <span>3 + 1</span>
-        <p class="de">Cafés + eigene Bäckerei</p>
-        <p class="en">Cafés + in-house bakery</p>
-      </div>
+      <div class="metric"><span>25+</span><p id="m1">Jahre Branchenerfahrung</p></div>
+      <div class="metric"><span>20–30%</span><p id="m2">jährl. Wachstum (Skalierungsphase)</p></div>
+      <div class="metric"><span>350→1.650€</span><p id="m3">pro m² Monatsumsatz</p></div>
+      <div class="metric"><span>4 Outlets</span><p id="m4">Aufbau einer mehrbetrieblichen Struktur</p></div>
     </section>
 
     <!-- PROFIL -->
     <section class="reveal">
-      <h2 class="de">Profil mit Wirkung</h2>
-      <h2 class="en">Profile with Impact</h2>
-      <p class="text de">Spezialisiert auf wirtschaftliche Entwicklung gastronomischer Konzepte mit klarer KPI-Orientierung. Nachweisbar durch Skalierung auf bis zu 30 Mitarbeitende, stabiles Wachstum von 20–30% p.a. sowie Aufbau 7-stelliger Umsatzstrukturen.</p>
-      <p class="text en">Specialised in the economic development of hospitality concepts with a clear KPI focus. Proven track record: scaling to 30+ employees, consistent 20–30% annual growth, and building seven-figure revenue structures.</p>
-      <p class="text de">Führung bedeutet für mich: Menschen verstehen, mitnehmen und gemeinsam Leistung aufbauen. Deshalb vertiefe ich aktuell mit dem Studium Heilpraktiker Psychotherapie gezielt meine Kompetenz in Kommunikation, Motivation und Teamentwicklung.</p>
-      <p class="text en">Leadership means understanding people, bringing them along, and building performance together. I am currently deepening these skills through studies in Psychological Health Practice, focusing on communication, motivation and team development.</p>
-      <p class="text de">Ich eigne mir Wissen schnell an, nutze moderne Tools gezielt und arbeite nach dem Prinzip: Entscheidend ist, effizient die richtigen Informationen zu finden und umzusetzen.</p>
-      <p class="text en">I acquire knowledge quickly, use modern tools purposefully and operate on the principle: what matters is finding the right information efficiently and turning it into results.</p>
+      <h2 id="h-profil">Profil mit Wirkung</h2>
+      <p class="text" id="profil1">Spezialisiert auf wirtschaftliche Entwicklung gastronomischer Konzepte mit klarer KPI-Orientierung. Nachweisbar durch Skalierung auf bis zu 30 Mitarbeitende, stabiles Wachstum von 20–30% p.a. sowie Aufbau 7-stelliger Umsatzstrukturen.</p>
+      <p class="text" id="profil2">Führung bedeutet für mich: Menschen verstehen, mitnehmen und gemeinsam Leistung aufbauen. Deshalb vertiefe ich aktuell mit dem Studium Heilpraktiker Psychotherapie gezielt meine Kompetenz in Kommunikation, Motivation und Teamentwicklung.</p>
+      <p class="text" id="profil3">Ich eigne mir Wissen schnell an, nutze moderne Tools gezielt und arbeite nach dem Prinzip: Entscheidend ist, effizient die richtigen Informationen zu finden und umzusetzen.</p>
     </section>
 
     <!-- KOMPETENZ -->
     <section class="kompetenzfelder reveal">
-      <h2 class="de">Kompetenzfelder</h2>
-      <h2 class="en">Core Competencies</h2>
+      <h2 id="h-kompetenz">Kompetenzfelder</h2>
       <div class="kompetenz-list">
-        <div class="kompetenz-row">
-          <span class="kompetenz-name de">Business Development</span>
-          <span class="kompetenz-name en">Business Development</span>
-          <span class="kompetenz-rating"><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span></span>
-        </div>
-        <div class="kompetenz-row">
-          <span class="kompetenz-name de">Führung & Personal</span>
-          <span class="kompetenz-name en">Leadership & HR</span>
-          <span class="kompetenz-rating"><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span></span>
-        </div>
-        <div class="kompetenz-row">
-          <span class="kompetenz-name de">Betriebswirtschaft</span>
-          <span class="kompetenz-name en">Business Management</span>
-          <span class="kompetenz-rating"><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span></span>
-        </div>
-        <div class="kompetenz-row">
-          <span class="kompetenz-name de">Prozessoptimierung</span>
-          <span class="kompetenz-name en">Process Optimisation</span>
-          <span class="kompetenz-rating"><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span></span>
-        </div>
-        <div class="kompetenz-row">
-          <span class="kompetenz-name de">Rösterei & Kaffeekunde</span>
-          <span class="kompetenz-name en">Roastery & Coffee Expertise</span>
-          <span class="kompetenz-rating"><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar"></span></span>
-        </div>
-        <div class="kompetenz-row">
-          <span class="kompetenz-name de">E-Commerce & Amazon</span>
-          <span class="kompetenz-name en">E-Commerce & Amazon</span>
-          <span class="kompetenz-rating"><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar"></span></span>
-        </div>
-        <div class="kompetenz-row">
-          <span class="kompetenz-name de">Marketing & Design</span>
-          <span class="kompetenz-name en">Marketing & Design</span>
-          <span class="kompetenz-rating"><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar"></span></span>
-        </div>
+        <div class="kompetenz-row"><span class="kompetenz-name" id="k1">Business Development</span><span class="kompetenz-rating"><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span></span></div>
+        <div class="kompetenz-row"><span class="kompetenz-name" id="k2">Führung & Personal</span><span class="kompetenz-rating"><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span></span></div>
+        <div class="kompetenz-row"><span class="kompetenz-name" id="k3">Betriebswirtschaft</span><span class="kompetenz-rating"><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span></span></div>
+        <div class="kompetenz-row"><span class="kompetenz-name" id="k4">Prozessoptimierung</span><span class="kompetenz-rating"><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span></span></div>
+        <div class="kompetenz-row"><span class="kompetenz-name" id="k5">Rösterei & Kaffeekunde</span><span class="kompetenz-rating"><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar"></span></span></div>
+        <div class="kompetenz-row"><span class="kompetenz-name" id="k6">E-Commerce & Amazon</span><span class="kompetenz-rating"><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar"></span></span></div>
+        <div class="kompetenz-row"><span class="kompetenz-name" id="k7">Marketing & Design</span><span class="kompetenz-rating"><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar filled"></span><span class="bar"></span></span></div>
       </div>
     </section>
 
     <!-- BERUFSERFAHRUNG -->
     <section class="timeline reveal">
-      <h2 class="de">Berufserfahrung</h2>
-      <h2 class="en">Professional Experience</h2>
+      <h2 id="h-erfahrung">Berufserfahrung</h2>
 
       <article class="job">
         <div class="job-head">
           <div class="job-title-row">
-            <h3 class="de">Business Development & Anleitung · Charlottenburger Genusshandwerk</h3>
-            <h3 class="en">Business Development & Coaching · Charlottenburger Genusshandwerk</h3>
-            <span class="job-badge de">Aktuell</span>
-            <span class="job-badge en">Current</span>
+            <h3 id="j1t">Business Development & Anleitung · Charlottenburger Genusshandwerk</h3>
+            <span class="job-badge" id="j1b">Aktuell</span>
           </div>
           <p>VITA e. V., Berlin · 06/2024 – heute</p>
         </div>
-        <ul class="de">
+        <ul id="j1ul">
           <li>Wirtschaftliche Weiterentwicklung der arbeitstherapeutischen Rösterei.</li>
           <li>Aufbau und Betrieb des Amazon-Shops inkl. Listing, Pricing und Performance.</li>
           <li>Einführung digitales Kassensystem (12/2024), Schulung und Administration.</li>
           <li>Produktentwicklung, Verpackungsdesign und Vertrieb über Messen/Direktkontakt.</li>
         </ul>
-        <ul class="en">
-          <li>Economic development of a work-therapy roastery within a social enterprise.</li>
-          <li>Built and operated the Amazon shop including listings, pricing and performance.</li>
-          <li>Introduced digital POS system (12/2024), trained staff and managed administration.</li>
-          <li>Product development, packaging design and sales via trade fairs and direct contact.</li>
-        </ul>
       </article>
 
       <article class="job">
         <div class="job-head">
-          <h3 class="de">Geschäftsführender Gesellschafter · Freshlife Gastro Consulting GmbH</h3>
-          <h3 class="en">Managing Director & Co-Owner · Freshlife Gastro Consulting GmbH</h3>
+          <h3 id="j2t">Geschäftsführender Gesellschafter · Freshlife Gastro Consulting GmbH</h3>
           <p>Berlin · 09/2014 – 09/2023</p>
         </div>
-        <ul class="de">
+        <ul id="j2ul">
           <li>2016 „Unser Café" aufgebaut und auf Monatsumsätze von über 100.000€ entwickelt.</li>
           <li>In der Skalierungsphase über mehrere Jahre 20–30% jährliches Wachstum realisiert.</li>
-          <li>Betriebsstruktur auf 3 Cafés, eigene Bäckerei und zusätzliches Liefergeschäft ausgebaut.</li>
+          <li>Betriebsstruktur auf 3 Cafés, eigene Bäckerei und Liefergeschäft ausgebaut.</li>
           <li>Bis zu 30 Mitarbeitende geführt, Umsatzstrukturen auf 7-stelligem Niveau entwickelt.</li>
           <li>Hands-on: Strategie, Controlling und Investitionen parallel zum operativen Tagesgeschäft.</li>
-        </ul>
-        <ul class="en">
-          <li>Built "Unser Café" from scratch to monthly revenues exceeding €100,000.</li>
-          <li>Achieved 20–30% annual growth over multiple years during the scaling phase.</li>
-          <li>Expanded operations to 3 cafés, an in-house bakery and a delivery business.</li>
-          <li>Led teams of up to 30 employees; developed seven-figure revenue structures.</li>
-          <li>Hands-on leadership: strategy, controlling and investment alongside daily operations.</li>
         </ul>
       </article>
 
       <article class="job compact">
-        <div class="job-head">
-          <h3 class="de">Weitere relevante Stationen</h3>
-          <h3 class="en">Further Relevant Positions</h3>
-        </div>
-        <ul>
-          <li class="de">Operations Manager · Milch & Zucker, Berlin (05/2011 – 08/2014)</li>
-          <li class="en">Operations Manager · Milch & Zucker, Berlin (05/2011 – 08/2014)</li>
-          <li class="de">Geschäftsführender Gesellschafter · bdk Wahllokal Restaurant GmbH, Berlin (09/2009 – 04/2011)</li>
-          <li class="en">Managing Director · bdk Wahllokal Restaurant GmbH, Berlin (09/2009 – 04/2011)</li>
-          <li class="de">Küchenchef · Courtyard by Marriott, Teltow (05/2005 – 08/2009)</li>
-          <li class="en">Head Chef · Courtyard by Marriott, Teltow (05/2005 – 08/2009)</li>
-          <li class="de">Küchenchef · Ramada Hotels, Ludwigshafen (06/2002 – 04/2005)</li>
-          <li class="en">Head Chef · Ramada Hotels, Ludwigshafen (06/2002 – 04/2005)</li>
+        <div class="job-head"><h3 id="j3t">Weitere relevante Stationen</h3></div>
+        <ul id="j3ul">
+          <li>Operations Manager · Milch & Zucker, Berlin (05/2011 – 08/2014)</li>
+          <li>Geschäftsführender Gesellschafter · bdk Wahllokal Restaurant GmbH, Berlin (09/2009 – 04/2011)</li>
+          <li>Küchenchef · Courtyard by Marriott, Teltow (05/2005 – 08/2009)</li>
+          <li>Küchenchef · Ramada Hotels, Ludwigshafen (06/2002 – 04/2005)</li>
         </ul>
       </article>
     </section>
 
     <!-- PROJEKTE -->
     <section class="projects reveal">
-      <h2 class="de">Ausgewählte Projekte</h2>
-      <h2 class="en">Selected Projects</h2>
-
+      <h2 id="h-projekte">Ausgewählte Projekte</h2>
       <article class="project-card">
         <div class="project-head">
-          <h3 class="de">Kundenbindungskonzept – Marken- & Erlebnisarchitektur</h3>
-          <h3 class="en">Customer Retention Concept – Brand & Experience Architecture</h3>
-          <p class="de">Entwicklung eines konsistenten Erlebnisrahmens für messbaren Markenwert</p>
-          <p class="en">Development of a consistent experience framework for measurable brand value</p>
+          <h3 id="p1t">Kundenbindungskonzept – Marken- & Erlebnisarchitektur</h3>
+          <p id="p1sub">Entwicklung eines konsistenten Erlebnisrahmens für messbaren Markenwert</p>
         </div>
-        <ul class="de">
+        <ul id="p1ul">
           <li><strong>Problem:</strong> Geringe Differenzierung im Markt, schwankende Kundenbindung.</li>
           <li><strong>Ansatz:</strong> Konsistentes Erlebnis-Framework über Produkt, Kommunikation und Service.</li>
           <li><strong>Umsetzung:</strong> Positionierung, Angebotslogik, Kontaktpunkte und visuelle Leitlinien in einem System.</li>
           <li><strong>Ergebnis:</strong> Stärkere Markenwahrnehmung, klarere Kundenansprache, bessere Skalierbarkeit.</li>
         </ul>
-        <ul class="en">
-          <li><strong>Problem:</strong> Low market differentiation and inconsistent customer retention.</li>
-          <li><strong>Approach:</strong> Consistent experience framework across product, communication and service.</li>
-          <li><strong>Execution:</strong> Positioning, offer logic, touchpoints and visual guidelines unified in one system.</li>
-          <li><strong>Result:</strong> Stronger brand perception, clearer customer messaging, improved scalability.</li>
-        </ul>
       </article>
-
       <article class="project-card">
         <div class="project-head">
-          <h3 class="de">Amazon-Shop-Aufbau für Rösterei (VITA e.V.)</h3>
-          <h3 class="en">Amazon Shop Launch – Roastery (VITA e.V.)</h3>
-          <p class="de">Digitaler Vertriebskanal von Null auf operativen Betrieb</p>
-          <p class="en">Digital sales channel built from scratch to full operations</p>
+          <h3 id="p2t">Amazon-Shop-Aufbau für Rösterei (VITA e.V.)</h3>
+          <p id="p2sub">Digitaler Vertriebskanal von Null auf operativen Betrieb</p>
         </div>
-        <ul class="de">
+        <ul id="p2ul">
           <li>Strukturierung von Listings, Preislogik und Produktdarstellung.</li>
           <li>Verzahnung von Logistik, Performance-Optimierung und kaufmännischen Prozessen.</li>
           <li>Aufbau eines nachhaltigen E-Commerce-Bausteins für zusätzliche Umsätze.</li>
         </ul>
-        <ul class="en">
-          <li>Structured listings, pricing logic and product presentation from the ground up.</li>
-          <li>Integrated logistics, performance optimisation and commercial processes.</li>
-          <li>Built a sustainable e-commerce channel generating additional revenue.</li>
-        </ul>
       </article>
-
       <article class="project-card">
         <div class="project-head">
-          <h3 class="de">Freshlife – Skalierung zur Mehrbetriebsstruktur</h3>
-          <h3 class="en">Freshlife – Scaling to Multi-Site Operations</h3>
-          <p class="de">Von einem Standort zu 3 Cafés + Bäckerei mit 7-stelligem Jahresumsatz</p>
-          <p class="en">From a single location to 3 cafés + bakery with seven-figure annual revenue</p>
+          <h3 id="p3t">Freshlife – Skalierung zur Mehrbetriebsstruktur</h3>
+          <p id="p3sub">Von einem Standort zu 3 Cafés + Bäckerei mit 7-stelligem Jahresumsatz</p>
         </div>
-        <ul class="de">
+        <ul id="p3ul">
           <li><strong>Aufbau:</strong> „Unser Café" auf Monatsumsätze über 100.000€ skaliert.</li>
           <li><strong>Wachstum:</strong> 20–30% p.a. über mehrere Skalierungsjahre.</li>
           <li><strong>Struktur:</strong> 3 Cafés, eigene Bäckerei, ergänzendes Liefergeschäft.</li>
           <li><strong>Leadership:</strong> 30 Mitarbeitende, Strategie, Controlling und Investitionen in Personalunion.</li>
-        </ul>
-        <ul class="en">
-          <li><strong>Build:</strong> Scaled "Unser Café" to monthly revenues exceeding €100,000.</li>
-          <li><strong>Growth:</strong> 20–30% p.a. over several scaling years.</li>
-          <li><strong>Structure:</strong> 3 cafés, in-house bakery and supplementary delivery business.</li>
-          <li><strong>Leadership:</strong> 30 employees, strategy, controlling and investment managed simultaneously.</li>
         </ul>
       </article>
     </section>
@@ -271,57 +163,32 @@
     <!-- AUSBILDUNG & STÄRKEN -->
     <section class="dual reveal">
       <article class="glass panel">
-        <h2 class="de">Ausbildung</h2>
-        <h2 class="en">Education</h2>
+        <h2 id="h-ausbildung">Ausbildung</h2>
         <ul class="plain">
-          <li>
-            <strong class="de">Studium Heilpraktiker Psychotherapie</strong>
-            <strong class="en">Studies: Psychological Health Practice</strong>
-            <br><span class="de">Berlin · seit 10/2023</span>
-            <span class="en">Berlin · since 10/2023</span>
-          </li>
-          <li>
-            <strong class="de">Betriebswirt (HWK) · Note 1,2</strong>
-            <strong class="en">Business Economist (HWK) · Grade 1.2</strong>
-            <br><span class="de">Handwerkskammer Berlin · 2011</span>
-            <span class="en">Chamber of Crafts Berlin · 2011</span>
-          </li>
-          <li>
-            <strong class="de">Ausbildung zum Koch</strong>
-            <strong class="en">Apprenticeship: Chef</strong>
-            <br><span>Steigenberger Hotels Mannheim · 1996–1999</span>
-          </li>
+          <li><strong>Studium Heilpraktiker Psychotherapie</strong><br>Berlin · seit 10/2023</li>
+          <li><strong id="edu2">Betriebswirt (HWK) · Note 1,2</strong><br>Handwerkskammer Berlin · 2011</li>
+          <li><strong id="edu3">Ausbildung zum Koch</strong><br>Steigenberger Hotels Mannheim · 1996–1999</li>
         </ul>
       </article>
-
       <article class="glass panel">
-        <h2 class="de">Sprachen & Stärken</h2>
-        <h2 class="en">Languages & Strengths</h2>
+        <h2 id="h-staerken">Sprachen & Stärken</h2>
         <ul class="plain">
-          <li class="de">Deutsch (Muttersprache) · Englisch (C1)</li>
-          <li class="en">German (native) · English (C1)</li>
-          <li class="de">Kooperativer, ergebnisorientierter Führungsstil</li>
-          <li class="en">Collaborative, results-oriented leadership style</li>
-          <li class="de">Kommunikationsstärke & Verhandlungssicherheit</li>
-          <li class="en">Strong communicator & confident negotiator</li>
-          <li class="de">Kreativität mit betriebswirtschaftlichem Fokus</li>
-          <li class="en">Creative thinking with a commercial focus</li>
+          <li id="s1">Deutsch (Muttersprache) · Englisch (C1)</li>
+          <li id="s2">Kooperativer, ergebnisorientierter Führungsstil</li>
+          <li id="s3">Kommunikationsstärke & Verhandlungssicherheit</li>
+          <li id="s4">Kreativität mit betriebswirtschaftlichem Fokus</li>
         </ul>
       </article>
     </section>
 
     <!-- KONTAKT -->
     <section class="contact reveal">
-      <h2 class="de">Interesse an einem Gespräch?</h2>
-      <h2 class="en">Interested in a conversation?</h2>
-      <p class="de">Ich freue mich auf den Austausch über Führungsrollen in Business Development, Operations oder Gastronomie-Management.</p>
-      <p class="en">I look forward to discussing leadership roles in Business Development, Operations or Hospitality Management.</p>
+      <h2 id="h-kontakt">Interesse an einem Gespräch?</h2>
+      <p id="kontakt-text">Ich freue mich auf den Austausch über Führungsrollen in Business Development, Operations oder Gastronomie-Management.</p>
       <div class="contact-actions">
-        <a href="mailto:okellermann@icloud.com" class="btn de">E-Mail senden</a>
-        <a href="mailto:okellermann@icloud.com" class="btn en">Send Email</a>
-        <a href="tel:+4917638539130" class="btn btn-alt de">Anrufen</a>
-        <a href="tel:+4917638539130" class="btn btn-alt en">Call me</a>
-        <a href="https://de.linkedin.com/in/oliver-kellermann" class="btn btn-alt" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:okellermann@icloud.com" class="btn" id="cMail">E-Mail senden</a>
+        <a href="tel:+4917638539130" class="btn btn-alt" id="cTel">Anrufen</a>
+        <a href="https://de.linkedin.com/in/oliver-kellermann" class="btn btn-alt" target="_blank">LinkedIn</a>
       </div>
     </section>
 
@@ -329,29 +196,82 @@
 
   <footer class="site-footer">
     <span>Oliver Kellermann · Berlin</span>
-    <span class="de">Stand: Februar 2026</span>
-    <span class="en">Updated: February 2026</span>
+    <span id="footer-date">Stand: Februar 2026</span>
   </footer>
 
   <script>
-    function toggleLang() {
-      const html = document.documentElement;
-      if (html.classList.contains('lang-de')) {
-        html.classList.remove('lang-de');
-        html.classList.add('lang-en');
-        html.lang = 'en';
-      } else {
-        html.classList.remove('lang-en');
-        html.classList.add('lang-de');
-        html.lang = 'de';
+    const translations = {
+      de: {
+        langBtn: "🇬🇧 English", ctaBtn: "Kontakt aufnehmen", btnMail: "Kontakt aufnehmen",
+        kicker: "Business Development • Operations • Gastronomie",
+        positioning: "Ich skaliere Gastronomie-Betriebe wirtschaftlich.",
+        lead: "Unternehmer, Betriebswirt (HWK) und Gastronom mit über 25 Jahren Erfahrung im Aufbau, in der Führung und in der Skalierung gastronomischer Betriebe.",
+        m1: "Jahre Branchenerfahrung", m2: "jährl. Wachstum (Skalierungsphase)", m3: "pro m² Monatsumsatz", m4: "Aufbau einer mehrbetrieblichen Struktur",
+        "h-profil": "Profil mit Wirkung",
+        profil1: "Spezialisiert auf wirtschaftliche Entwicklung gastronomischer Konzepte mit klarer KPI-Orientierung. Nachweisbar durch Skalierung auf bis zu 30 Mitarbeitende, stabiles Wachstum von 20–30% p.a. sowie Aufbau 7-stelliger Umsatzstrukturen.",
+        profil2: "Führung bedeutet für mich: Menschen verstehen, mitnehmen und gemeinsam Leistung aufbauen. Deshalb vertiefe ich aktuell mit dem Studium Heilpraktiker Psychotherapie gezielt meine Kompetenz in Kommunikation, Motivation und Teamentwicklung.",
+        profil3: "Ich eigne mir Wissen schnell an, nutze moderne Tools gezielt und arbeite nach dem Prinzip: Entscheidend ist, effizient die richtigen Informationen zu finden und umzusetzen.",
+        "h-kompetenz": "Kompetenzfelder", k2: "Führung & Personal", k3: "Betriebswirtschaft", k4: "Prozessoptimierung", k5: "Rösterei & Kaffeekunde",
+        "h-erfahrung": "Berufserfahrung",
+        j1t: "Business Development & Anleitung · Charlottenburger Genusshandwerk", j1b: "Aktuell",
+        j2t: "Geschäftsführender Gesellschafter · Freshlife Gastro Consulting GmbH",
+        j3t: "Weitere relevante Stationen",
+        "h-projekte": "Ausgewählte Projekte",
+        p1t: "Kundenbindungskonzept – Marken- & Erlebnisarchitektur", p1sub: "Entwicklung eines konsistenten Erlebnisrahmens für messbaren Markenwert",
+        p2t: "Amazon-Shop-Aufbau für Rösterei (VITA e.V.)", p2sub: "Digitaler Vertriebskanal von Null auf operativen Betrieb",
+        p3t: "Freshlife – Skalierung zur Mehrbetriebsstruktur", p3sub: "Von einem Standort zu 3 Cafés + Bäckerei mit 7-stelligem Jahresumsatz",
+        "h-ausbildung": "Ausbildung", edu2: "Betriebswirt (HWK) · Note 1,2", edu3: "Ausbildung zum Koch",
+        "h-staerken": "Sprachen & Stärken",
+        s1: "Deutsch (Muttersprache) · Englisch (C1)", s2: "Kooperativer, ergebnisorientierter Führungsstil",
+        s3: "Kommunikationsstärke & Verhandlungssicherheit", s4: "Kreativität mit betriebswirtschaftlichem Fokus",
+        "h-kontakt": "Interesse an einem Gespräch?",
+        "kontakt-text": "Ich freue mich auf den Austausch über Führungsrollen in Business Development, Operations oder Gastronomie-Management.",
+        cMail: "E-Mail senden", cTel: "Anrufen", "footer-date": "Stand: Februar 2026"
+      },
+      en: {
+        langBtn: "🇩🇪 Deutsch", ctaBtn: "Get in touch", btnMail: "Get in touch",
+        kicker: "Business Development • Operations • Hospitality",
+        positioning: "I scale hospitality businesses economically.",
+        lead: "Entrepreneur, business economist (HWK) and restaurateur with 25+ years of experience building, leading and scaling hospitality businesses.",
+        m1: "Years industry experience", m2: "annual growth (scaling phase)", m3: "per m² monthly revenue", m4: "Built a multi-site operating structure",
+        "h-profil": "Profile with Impact",
+        profil1: "Specialised in the economic development of hospitality concepts with a clear KPI focus. Proven track record: scaling to 30+ employees, consistent 20–30% annual growth, and building seven-figure revenue structures.",
+        profil2: "Leadership means understanding people, bringing them along, and building performance together. I am currently deepening these skills through studies in Psychological Health Practice, focusing on communication, motivation and team development.",
+        profil3: "I acquire knowledge quickly, use modern tools purposefully and operate on the principle: what matters is finding the right information efficiently and turning it into results.",
+        "h-kompetenz": "Core Competencies", k2: "Leadership & HR", k3: "Business Management", k4: "Process Optimisation", k5: "Roastery & Coffee Expertise",
+        "h-erfahrung": "Professional Experience",
+        j1t: "Business Development & Coaching · Charlottenburger Genusshandwerk", j1b: "Current",
+        j2t: "Managing Director & Co-Owner · Freshlife Gastro Consulting GmbH",
+        j3t: "Further Relevant Positions",
+        "h-projekte": "Selected Projects",
+        p1t: "Customer Retention Concept – Brand & Experience Architecture", p1sub: "Development of a consistent experience framework for measurable brand value",
+        p2t: "Amazon Shop Launch – Roastery (VITA e.V.)", p2sub: "Digital sales channel built from scratch to full operations",
+        p3t: "Freshlife – Scaling to Multi-Site Operations", p3sub: "From a single location to 3 cafés + bakery with seven-figure annual revenue",
+        "h-ausbildung": "Education", edu2: "Business Economist (HWK) · Grade 1.2", edu3: "Apprenticeship: Chef",
+        "h-staerken": "Languages & Strengths",
+        s1: "German (native) · English (C1)", s2: "Collaborative, results-oriented leadership style",
+        s3: "Strong communicator & confident negotiator", s4: "Creative thinking with a commercial focus",
+        "h-kontakt": "Interested in a conversation?",
+        "kontakt-text": "I look forward to discussing leadership roles in Business Development, Operations or Hospitality Management.",
+        cMail: "Send Email", cTel: "Call me", "footer-date": "Updated: February 2026"
       }
+    };
+
+    let currentLang = 'de';
+
+    function toggleLang() {
+      currentLang = currentLang === 'de' ? 'en' : 'de';
+      const t = translations[currentLang];
+      for (const [id, text] of Object.entries(t)) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = text;
+      }
+      document.documentElement.lang = currentLang;
     }
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) entry.target.classList.add('show');
-      });
-    }, { threshold: 0.1 });
+      entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.08 });
     document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
   </script>
 </body>
