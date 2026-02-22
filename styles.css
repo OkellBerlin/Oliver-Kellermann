@@ -100,7 +100,7 @@ body {
 .photo-img {
   width:100%; height:100%; border-radius:50%;
   object-fit:cover; object-position:center top; display:block;
-  transform: rotate(var(-90));
+  transform: rotate(var(90));
 }
 
 .btn {
